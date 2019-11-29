@@ -1,0 +1,51 @@
+<h2 class="center">Authorisations</h2><br>
+<div class="container">
+	<form name="formAuth" (ngSubmit)="f.form.valid && allow()" #f="ngForm" novalidate>
+		<div class="acceptBlock row">
+			<div class="col s6 offset-s2 question">
+				Acceptez-vous la récupération de votre numéro de téléphone?
+			</div>
+			<div class="switch col s2" [ngClass]="{ 'has-error': f.submitted && !rule1.valid }">
+    			<label>
+      				Non
+				<input id="auth1" type="checkbox" name="rule1" [(ngModel)]="model.rule1" #rule1="ngModel">
+				<span class="lever"></span>
+					Oui
+				</label>
+			</div>
+		</div>
+
+		<div class="acceptBlock row" [ngClass]="{ 'has-error': f.submitted && !rule2.valid }">
+			<div class="col s6 offset-s2 question">
+				Acceptez-vous la récupération de votre mail?
+			</div>
+			<div class="switch col s2">
+    			<label>
+      				Non
+				<input id="auth2" type="checkbox" name="rule2" [(ngModel)]="model.rule2" #rule2="ngModel">
+				<span class="lever"></span>
+					Oui
+				</label>
+			</div>
+		</div>
+
+		<div class="acceptBlock row" [ngClass]="{ 'has-error': f.submitted && !rule3.valid }">
+			<div class="col s6 offset-s2 question">
+				Acceptez-vous la récupération de votre travail actuel?
+			</div>
+			<div class="switch col s2">
+    			<label>
+      				Non
+				<input id="auth3" type="checkbox"  name="rule3" [(ngModel)]="model.rule3" #rule3="ngModel" >
+				<span class="lever"></span>
+					Oui
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<button class="btn waves-effect waves-light green col offset-s2" type="submit" name="action" [disabled]="!f.form.valid" onclick="M.toast({html: 'Modifications enregistrées'})">Valider
+				<i class="material-icons right">check</i>
+  			</button>
+  		</div>
+	</form>
+</div>

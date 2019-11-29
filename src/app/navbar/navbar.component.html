@@ -1,0 +1,17 @@
+ <nav class="green darken-3">
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="hide-on-med-and-down" *ngIf="checkRights(['user'])">
+        <li><a href routerLink="/home">Home</a></li>
+        <li><a href routerLink="/rgpd">RGPD</a></li>
+        <li><a href routerLink="/authorisation">Authorisations</a></li>
+      </ul>      
+      <ul id="nav-mobile" class="hide-on-med-and-down" *ngIf="checkRights(['admin'])">
+        <li><a href routerLink="/home">Home</a></li>
+        <li><a href routerLink="/studentslist">Liste</a></li>
+        <li><a href routerLink="/stat">Statistiques</a></li>
+      </ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down" *ngIf="checkRights(['admin']) || checkRights(['user'])">
+      	<li><a (click)="logout()"><i class="material-icons left">exit_to_app</i>{{getLogin()}}</a></li>
+      </ul>
+    </div>
+  </nav>

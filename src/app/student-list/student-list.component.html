@@ -1,0 +1,19 @@
+<div class="container">
+  <table class="highlight">
+    <thead>
+      <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Promotion</th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let e of etuServ.etudiants; let i=index">
+      <tr *ngIf="e.promo!=''" href [routerLink]="['/etudiant',e.id]">
+        <td>{{e.nom}}</td>
+        <td>{{e.prenom}}</td>
+        <td>{{e.promo}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

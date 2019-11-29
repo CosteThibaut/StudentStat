@@ -1,0 +1,21 @@
+<h2 class="center">
+  Bienvenue {{getLogin()}} !
+</h2>
+
+<div class="container">
+	<div *ngIf="checkRights(['admin'])">
+		<i class="material-icons medium">account_box</i>
+		<span class="desc"><b>Role</b> : Administrateur</span>
+		<p>
+			Vous pouvez parcourir des données relatives à d'anciens élèves.
+		</p>
+	</div>
+	<div *ngIf="checkRights(['user'])">
+		<i class="material-icons medium">account_box</i>
+		<span class="desc"><b>Role</b> : Utilisateur</span>
+		<p>
+			Vous pouvez désormais gérer vos permissions et droits.
+		</p>
+	</div>
+
+</div>

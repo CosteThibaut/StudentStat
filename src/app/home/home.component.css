@@ -1,0 +1,14 @@
+p{
+	font-size: 120%;
+}
+
+i{
+	float : left;
+	padding-right: 20px;
+}
+
+.desc{
+	display: block;
+	padding-top: 20px;
+	font-size: 120%;
+}

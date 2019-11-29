@@ -1,0 +1,74 @@
+<h2 class="center">Etudiant</h2><br>
+<div class="container">
+	<form name="formEtud" (ngSubmit)="f.form.valid && modify()" #f="ngForm" novalidate>
+		<div class="row">
+        		<div class="input-field col s5 offset-s2" [ngClass]="{ 'has-error': f.submitted && !id.valid }">
+					<input id="nom" type="text" class="validate" name="nom" [(ngModel)]="model.nom" #id="ngModel">
+					<label for="nom">Nom</label>
+				</div>
+				<div class="col s2 actualResult">
+					<span>{{getStudent().nom}}</span>
+				</div>
+		</div>
+		<div class="row">
+        		<div class="input-field col s5 offset-s2" [ngClass]="{ 'has-error': f.submitted && !id.valid }">
+					<input id="prenom" type="text" class="validate" name="prenom" [(ngModel)]="model.prenom" #id="ngModel">
+					<label for="prenom">Prénom</label>
+				</div>
+				<div class="col s2 actualResult">
+					<span>{{getStudent().prenom}}</span>
+				</div>
+		</div>
+		<div class="row">
+        		<div class="input-field col s5 offset-s2" [ngClass]="{ 'has-error': f.submitted && !id.valid }">
+					<input id="promo" type="text" class="validate" name="promo" [(ngModel)]="model.promo" #id="ngModel">
+					<label for="promo">Promotion</label>
+				</div>
+				<div class="col s2 actualResult">
+					<span>{{getStudent().promo}}</span>
+				</div>
+		</div>
+		<div class="row">
+        		<div class="input-field col s5 offset-s2" [ngClass]="{ 'has-error': f.submitted && !id.valid }">
+					<input id="option" type="text" class="validate" name="option" [(ngModel)]="model.option" #id="ngModel">
+					<label for="option">Option</label>
+				</div>
+				<div class="col s2 actualResult">
+					<span>{{getStudent().option}}</span>
+				</div>
+		</div>
+		<div class="row">
+        		<div class="input-field col s5 offset-s2" [ngClass]="{ 'has-error': f.submitted && !id.valid }">
+					<input id="metier" type="text" class="validate" name="metier" [(ngModel)]="model.metier" #id="ngModel">
+					<label for="metier">Métier</label>
+				</div>
+				<div class="col s2 actualResult">
+					<span>{{getStudent().metier}}</span>
+				</div>
+		</div>
+		<div class="row">
+        		<div class="input-field col s5 offset-s2" [ngClass]="{ 'has-error': f.submitted && !id.valid }">
+					<input id="tel" type="text" class="validate" name="tel" [(ngModel)]="model.tel" #id="ngModel">
+					<label for="tel">Téléphone</label>
+				</div>
+				<div class="col s2 actualResult">
+					<span>{{getStudent().tel}}</span>
+				</div>
+		</div>
+		<div class="row">
+        		<div class="input-field col s5 offset-s2" [ngClass]="{ 'has-error': f.submitted && !id.valid }">
+					<input id="mail" type="text" class="validate" name="mail" [(ngModel)]="model.mail" #id="ngModel">
+					<label for="mail">Email</label>
+				</div>
+				<div class="col s2 actualResult">
+					<span>{{getStudent().mail}}</span>
+				</div>
+		</div>
+
+		<div class="row">
+			<button class="btn waves-effect waves-light green col offset-s2" type="submit" name="action" [disabled]="!f.form.valid" onclick="M.toast({html: 'Modifications enregistrées'})">Valider
+				<i class="material-icons right">check</i>
+  			</button>
+  		</div>
+	</form>
+</div>

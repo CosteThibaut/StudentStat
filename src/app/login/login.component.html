@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="connectBox">
+		<h3 class="center">Connexion</h3>
+		<form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+			<div class="row">
+        		<div class="input-field col s12" [ngClass]="{ 'has-error': f.submitted && !id.valid }">
+					<input id="id" type="text" class="validate" name="id" [(ngModel)]="model.id" #id="ngModel">
+					<label for="id">Identifiant</label>
+				</div>
+				<div class="input-field col s12" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+					<input id="password" type="password" name="password" class="validate" [(ngModel)]="model.password" #password="ngModel">
+					<label for="password">Mot de passe</label>
+				</div>
+			</div>
+			<button class="btn waves-effect waves-light green" type="submit" name="action" [disabled]="!f.form.valid">Connexion
+				<i class="material-icons right">send</i>
+  			</button>
+		</form>
+	</div>
+</div>
