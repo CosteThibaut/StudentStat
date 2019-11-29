@@ -13,5 +13,5 @@ You can use the service with two differents rights : admin or user.
 
 ## How to log in
 Profiles are stored in the *data.json* file.
-For admin mode, use login : **admin** and password : **admin**.
-For user mode, use login : **jack** and password : **jack**.
+* For admin mode, use login : `admin` and password : `admin`.
+* For user mode, use login : `jack` and password : `jack`.
